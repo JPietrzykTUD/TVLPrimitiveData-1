@@ -34,7 +34,6 @@ jobs:
     - name: Update TVL generator repository
       run: |
         git submodule foreach -q --recursive 'branch="$(git config -f $toplevel/.gitmodules submodule.$name.branch)"; git switch $branch'
-        cd generator
         git add primitive_data
         git commit -m "Updated submodule primitive_data"
         python tvlgen.py -o ./lib -c config -d primitive_data
