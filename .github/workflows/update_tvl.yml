@@ -13,7 +13,7 @@ jobs:
     - name: Checkout TVL repository (recursive)
       uses: actions/checkout@v3
       with:
-        repository: db-tu-dresden/TVL.git
+        repository: JPietrzykTUD/TVL-1.git
         ref: main
         token: '${{ secrets.DHTVL_AT }}'
         submodules: recursive
